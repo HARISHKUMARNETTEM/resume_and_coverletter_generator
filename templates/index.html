@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>AI Resume & Cover Letter Generator</h1>
+
+    <form method="POST">
+        <div class="row">
+            <div class="column">
+                <label>Name:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="column">
+                <label>Contact Number:</label>
+                <input type="text" name="contact" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label>Education:</label>
+                <select name="education" required>
+                    <option value="" disabled selected>Select Education</option>
+                    {% for edu in education_options %}
+                    <option value="{{ edu }}">{{ edu }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="column">
+                <label>Experience:</label>
+                <select name="experience" required>
+                    <option value="" disabled selected>Select Experience</option>
+                    {% for exp in experience_options %}
+                    <option value="{{ exp }}">{{ exp }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label>Job Role:</label>
+                <input type="text" name="job_role" required>
+            </div>
+            <div class="column">
+                <label>Company:</label>
+                <input type="text" name="company" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label>Skills:</label>
+                <input type="text" name="skills" required>
+            </div>
+            <div class="column">
+                <label>Address:</label>
+                <input type="text" name="address" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label>Certifications:</label>
+                <input type="text" name="certifications" required>
+            </div>
+            <div class="column">
+                <label>Achievements:</label>
+                <input type="text" name="achievements" required>
+            </div>
+        </div>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    {% if show_output %}
+    <div class="output">
+        <h2>Generated Resume</h2>
+        <pre>{{ resume }}</pre>
+        <h2>Generated Cover Letter</h2>
+        <pre>{{ cover_letter }}</pre>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

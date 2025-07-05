@@ -1,0 +1,66 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment folders
+.venv/
+venv/
+env/
+ENV/
+*.env
+
+# Environment and API key file
+.env
+
+# Editor-specific folders
+.vscode/
+.idea/
+
+# System files (macOS and Windows)
+.DS_Store
+Thumbs.db
+
+# Log and temporary files
+*.log
+*.tmp
+*.bak
+tempCodeRunnerFile.py
+
+# Flask session or local cache
+instance/
+flask_session/
+
+# AI API-generated temp or cache (if any)
+genai_cache/
+genai_logs/
+
+# SQLite or other local databases
+*.db
+*.sqlite3
+*.sqlite
+
+# Jupyter notebooks (not used, but ignored for safety)
+.ipynb_checkpoints/
+
+# Build/distribution (optional if packaging later)
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Documentation (if generated using Sphinx or MkDocs)
+docs/_build/
+
+# Output files for export features (future-proofing)
+*.pdf
+*.docx
+*.pptx
+
+# Resume or cover letter preview/output files
+output/
+results/
+generated/
